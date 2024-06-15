@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+    /* Background */
+    --foreground-rgb: 160, 187, 233;
+    --background-start-rgb: 50, 60, 80;
+    --background-end-rgb: 202, 155, 194;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(31,9,96);
+  background: -moz-radial-gradient(circle, rgba(31,9,96,1) 0%, rgba(5,5,5,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(31,9,96,1) 0%, rgba(5,5,5,1) 100%);
+  background: radial-gradient(circle, rgba(31,9,96,1) 0%, rgba(5,5,5,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f0960",endColorstr="#050505",GradientType=1);
+}
+
+/* NAVBAR */
+
+.navbar-background {
+  position: sticky;
+  top: 0;
+  background:  linear-gradient(to right, var(--first-color) 1%, var(--second-color) 7%, 
+    var(--third-color) 50%, var(--fourth-color) 80%);
+  backdrop-filter: blur(50%);
+}
+
+.backgroundDesplegable {
+  background: rgb(0,0,0);
+  background: -moz-radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 86%, rgba(99,39,183,1) 89%);
+  background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 86%, rgba(99,39,183,1) 89%);
+  background: radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 86%, rgba(99,39,183,1) 89%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#6327b7",GradientType=1);
+}
+
+/* HERO PAGE */
+
+
+.img-fp {
+  clip-path: circle(50%);
+}
+
+.img-fp {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.img-fp:hover {
+  transform: translateY(-20px) scale(1.03) rotateX(-30deg);
+}
+
+.underline-animation {
+  position: relative;
+}
+
+@keyframes underlineSlide {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.underline-animation::after {
+  content: '';
+  display: block;
+  position: absolute; /* Asegura el posicionamiento correcto del pseudo-elemento */
+  margin: auto;
+  height: 2px;
+  width: 0;
+  background: currentColor;
+  transition: width 1s ease-in-out;
+  bottom: -5px; 
+  left: 0;
+}
+
+.underline-animation:hover::after {
+  animation: underlineSlide 1.0s forwards;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
