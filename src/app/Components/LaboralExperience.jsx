@@ -3,8 +3,8 @@ import ListItemExperience from "./ListItemExperience";
 
 function LaboralExperience() {
   return (
-    <section className="w-full flex justify-center">
-      <div className="w-full flex max-w-3xl justify-center items-start flex-col">
+    <section className="w-full flex justify-center mb-3">
+      <div className="w-full flex max-w-3xl justify-center items-start flex-col pl-3">
         <article className="pb-4">
           <h2 className="text-4xl text-first text-start underline underline-offset-[7px] font-bold inline-block">
             Laboral Experience
@@ -13,8 +13,8 @@ function LaboralExperience() {
             Here you can see my laboral experience.
           </p>
         </article>
-        <div className="pt-2 mt-3 md:h-[300px] flex items-center">
-          <ol class="border-s border-first md:flex md:justify-center md:gap-6 md:border-s-0 md:border-t">
+        <div className="pt-2 mt-3 lg:h-[300px] flex items-center md:pl-3">
+          <ol class="border-s border-first lg:flex lg:justify-center lg:gap-6 lg:border-s-0 lg:border-t md:ml-2">
             <ListItemExperience
               date={"November 2023 - May 2024"}
               job={"Advanced Backend Tutor"}

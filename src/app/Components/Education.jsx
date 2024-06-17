@@ -6,15 +6,17 @@ function Education() {
   return (
     <section className="w-full flex justify-center">
       <section className="relative flex flex-col justify-center overflow-hidden">
-        <div className="w-full max-w-3xl py-3">
-          <h2 className="text-4xl text-first underline underline-offset-[7px] font-bold inline-block">
-            Education
-          </h2>
-          <p className="pt-3 text-third pl-2">
-            I'm a <span className="font-bold">self-taught</span> person, I learn
-            from the internet, courses, but I also have studies in the
-            university.
-          </p>
+        <div className="w-full max-w-3xl py-2">
+          <div className="pl-3">
+            <h2 className="text-4xl text-first underline underline-offset-[7px] font-bold inline-block">
+              Education
+            </h2>
+            <p className="pt-3 text-third pl-2">
+              I'm a <span className="font-bold">self-taught</span> person, I learn
+              from the internet, courses, but I also have studies in the
+              university.
+            </p>
+          </div>
           <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
             <div className="w-full max-w-3xl mx-auto">
               <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">

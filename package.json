@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "atropos": "^2.0.2",
     "next": "14.2.4",
     "particles.js": "^2.0.0",
     "react": "^18",
