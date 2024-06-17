@@ -2,6 +2,8 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Education from "./Components/Education";
 import LaboralExperience from "./Components/LaboralExperience";
+import Projects from "./Components/Projects";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
         <Hero/>
         <Education/>
         <LaboralExperience />
+        <Projects />
+        <Footer />
       </main>
   );
 }
