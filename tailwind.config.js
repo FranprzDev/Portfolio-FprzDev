@@ -7,6 +7,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      bg: {
+        'common': '#fcf9ff',
+        'first': '#dfd7ef',
+        'second': '#b7a5da',
+        'third': '#9c8bcf',
+        'fourth': '#ca9bc2',
+        'fifth': '#a0bbe9',
+      },
+      border: {
+        'common': '#fcf9ff',
+        'first': '#dfd7ef',
+        'second': '#b7a5da',
+        'third': '#9c8bcf',
+        'fourth': '#ca9bc2',
+        'fifth': '#a0bbe9',
+      },
       colors: {
       'common': '#fcf9ff',
       'first': '#dfd7ef',

@@ -10,12 +10,12 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="d-sticky py-3 flex items-center justify-around w-full navbar-background z-50">
+    <nav className="navbar-blur sticky py-3 flex items-center justify-around w-full max-w-3xl navbar-background z-50 ">
       <div className="flex justify-center items-center space-x-10">
         <section className="flex gap-5 items-center hover:text-fourth">
-          <h3 className="hover:text-third">{"<"}</h3>
-          <h1 className="text-2xl text-first hover:text-fourth">FprzDev</h1>
-          <h3 className="hover:text-third">{"/>"}</h3>
+          <h3 className="text-3xl hover:text-third">{"<"}</h3>
+          <h1 className="text-4xl text-first hover:text-fourth">FprzDev</h1>
+          <h3 className="text-3xl hover:text-third">{"/>"}</h3>
         </section>
       </div>
 
@@ -43,7 +43,7 @@ function Navbar() {
           <li>
             <a
               href="#"
-              className="text-3xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              className="text-4xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
               Home <IoIosHome />
             </a>
@@ -90,40 +90,32 @@ function Navbar() {
           <li>
             <a
               href="#"
-              className="text-2xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              className="text-sm text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
-              Home <IoIosHome />
+              About
             </a>
           </li>
           <li>
             <a
               href="#"
-              className="text-2xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              className="text-sm text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
-              About <BsPersonCircle />
+              Projects
             </a>
           </li>
           <li>
             <a
               href="#"
-              className="text-2xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              className="text-sm text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
-              Projects <GoProjectSymlink />
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-2xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
-            >
-              Contact <IoIosContact />
+              Contact
             </a>
           </li>
           <li className="underline-animation text-center hover:text-third">
             <button>
               <a
                 href="#"
-                className="text-2xl flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third "
+                className="text-sm flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third "
               >
                 EN <FaLanguage />
               </a>

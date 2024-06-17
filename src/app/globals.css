@@ -20,11 +20,11 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(31,9,96);
-  background: -moz-radial-gradient(circle, rgba(31,9,96,1) 0%, rgba(5,5,5,1) 100%);
-  background: -webkit-radial-gradient(circle, rgba(31,9,96,1) 0%, rgba(5,5,5,1) 100%);
-  background: radial-gradient(circle, rgba(31,9,96,1) 0%, rgba(5,5,5,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f0960",endColorstr="#050505",GradientType=1);
+  background: rgb(31, 9, 96);
+  background: -moz-radial-gradient(circle, rgba(31, 9, 96, 1) 0%, rgba(5, 5, 5, 1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(31, 9, 96, 1) 0%, rgba(5, 5, 5, 1) 100%);
+  background: radial-gradient(circle, rgba(31, 9, 96, 1) 0%, rgba(5, 5, 5, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f0960", endColorstr="#050505", GradientType=1);
 }
 
 /* NAVBAR */
@@ -32,17 +32,21 @@ body {
 .navbar-background {
   position: sticky;
   top: 0;
-  background:  linear-gradient(to right, var(--first-color) 1%, var(--second-color) 7%, 
-    var(--third-color) 50%, var(--fourth-color) 80%);
+  background: linear-gradient(to right, var(--first-color) 1%, var(--second-color) 7%,
+      var(--third-color) 50%, var(--fourth-color) 80%);
   backdrop-filter: blur(50%);
 }
 
 .backgroundDesplegable {
-  background: rgb(0,0,0);
-  background: -moz-radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 86%, rgba(99,39,183,1) 89%);
-  background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 86%, rgba(99,39,183,1) 89%);
-  background: radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 86%, rgba(99,39,183,1) 89%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#6327b7",GradientType=1);
+  background: rgb(0, 0, 0);
+  background: -moz-radial-gradient(circle, rgba(0, 0, 0, 1) 7%, rgba(0, 0, 0, 1) 86%, rgba(99, 39, 183, 1) 89%);
+  background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 7%, rgba(0, 0, 0, 1) 86%, rgba(99, 39, 183, 1) 89%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 7%, rgba(0, 0, 0, 1) 86%, rgba(99, 39, 183, 1) 89%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#6327b7", GradientType=1);
+}
+
+.navbar-blur {
+  backdrop-filter: blur(5px);
 }
 
 /* HERO PAGE */
@@ -70,6 +74,7 @@ body {
     width: 0;
     left: 0;
   }
+
   100% {
     width: 100%;
     left: 0;
@@ -79,13 +84,14 @@ body {
 .underline-animation::after {
   content: '';
   display: block;
-  position: absolute; /* Asegura el posicionamiento correcto del pseudo-elemento */
+  position: absolute;
+  /* Asegura el posicionamiento correcto del pseudo-elemento */
   margin: auto;
   height: 2px;
   width: 0;
   background: currentColor;
   transition: width 1s ease-in-out;
-  bottom: -5px; 
+  bottom: -5px;
   left: 0;
 }
 
@@ -97,4 +103,38 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Education section */
+
+.education-even {
+  background: rgb(48, 14, 150);
+  background: -moz-linear-gradient(160deg, rgba(48, 14, 150, 1) 5%, rgba(26, 8, 79, 1) 15%, rgba(18, 6, 54, 1) 25%, rgba(0, 0, 0, 1) 50%, rgba(18, 6, 54, 1) 75%, rgba(26, 8, 79, 1) 85%, rgba(48, 14, 150, 1) 95%);
+  background: -webkit-linear-gradient(160deg, rgba(48, 14, 150, 1) 5%, rgba(26, 8, 79, 1) 15%, rgba(18, 6, 54, 1) 25%, rgba(0, 0, 0, 1) 50%, rgba(18, 6, 54, 1) 75%, rgba(26, 8, 79, 1) 85%, rgba(48, 14, 150, 1) 95%);
+  background: linear-gradient(160deg, rgba(48, 14, 150, 1) 5%, rgba(26, 8, 79, 1) 15%, rgba(18, 6, 54, 1) 25%, rgba(0, 0, 0, 1) 50%, rgba(18, 6, 54, 1) 75%, rgba(26, 8, 79, 1) 85%, rgba(48, 14, 150, 1) 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#300e96", endColorstr="#300e96", GradientType=1);
+}
+
+.education-odd {
+  background: rgb(48, 14, 150);
+  background: -moz-linear-gradient(70deg, rgba(48, 14, 150, 1) 5%, rgba(26, 8, 79, 1) 15%, rgba(18, 6, 54, 1) 25%, rgba(0, 0, 0, 1) 50%, rgba(18, 6, 54, 1) 75%, rgba(26, 8, 79, 1) 85%, rgba(48, 14, 150, 1) 95%);
+  background: -webkit-linear-gradient(70deg, rgba(48, 14, 150, 1) 5%, rgba(26, 8, 79, 1) 15%, rgba(18, 6, 54, 1) 25%, rgba(0, 0, 0, 1) 50%, rgba(18, 6, 54, 1) 75%, rgba(26, 8, 79, 1) 85%, rgba(48, 14, 150, 1) 95%);
+  background: linear-gradient(70deg, rgba(48, 14, 150, 1) 5%, rgba(26, 8, 79, 1) 15%, rgba(18, 6, 54, 1) 25%, rgba(0, 0, 0, 1) 50%, rgba(18, 6, 54, 1) 75%, rgba(26, 8, 79, 1) 85%, rgba(48, 14, 150, 1) 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#300e96", endColorstr="#300e96", GradientType=1);
+}
+.education-logo-animation:hover {
+  animation: spin 3s linear infinite; 
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  filter: contrast(0.8) brightness(1.2);
 }
