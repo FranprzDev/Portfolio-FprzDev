@@ -12,7 +12,7 @@ function Education() {
               Education
             </h2>
             <p className="pt-3 text-third">
-              I'm a <span className="font-bold">self-taught</span> person, I learn
+              I{"&apos;"}m a <span className="font-bold">self-taught</span> person, I learn
               from the internet, courses, but I also have studies in the
               university.
             </p>

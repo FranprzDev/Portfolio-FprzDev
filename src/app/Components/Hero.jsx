@@ -22,7 +22,7 @@ function Hero() {
           <h2 className="text-second text-2xl">Software Engineer</h2>
           <p className="text-fourth">
             First be a good person, then be a good professional, <br />
-            <span className="font-bold">I&apos;m both."</span>
+            <span className="font-bold">I{"&apos;"}m both."</span>
           </p>
 
           <div className="flex flex-row mt-3 gap-3">
