@@ -4,14 +4,14 @@ import { GoLinkExternal } from "react-icons/go";
 
 function Education() {
   return (
-    <section className="w-full flex justify-center">
+    <section className="w-full flex justify-center" id="education">
       <section className="relative flex flex-col justify-center overflow-hidden">
         <div className="w-full max-w-3xl py-2">
           <div className="pl-3">
             <h2 className="text-4xl text-first underline underline-offset-[7px] font-bold inline-block">
               Education
             </h2>
-            <p className="pt-3 text-third pl-2">
+            <p className="pt-3 text-third">
               I'm a <span className="font-bold">self-taught</span> person, I learn
               from the internet, courses, but I also have studies in the
               university.
@@ -19,7 +19,7 @@ function Education() {
           </div>
           <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
             <div className="w-full max-w-3xl mx-auto">
-              <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+              <div className="pr-3 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
                 <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                   <div className="flex items-center justify-center w-10 h-10 rounded-full border border-slate-300 bg-first text-fifth text-4xl shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                     <a

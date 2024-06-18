@@ -5,6 +5,7 @@ import LaboralExperience from "./Components/LaboralExperience";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+// import Technologies from "./Components/Technologies";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Education />
       <LaboralExperience />
+      {/* <Technologies /> */}
       <Projects />
       <Contact />
       <Footer />

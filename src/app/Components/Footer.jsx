@@ -8,7 +8,7 @@ function Footer() {
                 All rights reserved.
         </p>
         <p className="text-third mt-1 mb-4">
-            Made with <span className="text-fourth">❤</span> for Francisco Perez
+            Made with <span className="text-fourth">❤</span> by Francisco Perez
         </p>
       </div>
     </footer>

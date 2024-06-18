@@ -9,7 +9,7 @@ function LaboralExperience() {
           <h2 className="text-4xl text-first text-start underline underline-offset-[7px] font-bold inline-block">
             Laboral Experience
           </h2>
-          <p className="pt-3 text-third pl-2">
+          <p className="pt-3 text-third">
             Here you can see my laboral experience.
           </p>
         </article>

@@ -26,8 +26,8 @@ function Navbar() {
 
         <ul
           className={`backgroundDesplegable flex-col items-start space-x-0 space-y-4 pt-5 min-h-screen ${
-            isOpen ? "absolute left-0 right-0 bottom-0 top-0" : "hidden"
-          } absolute top-0 w-full h-full transition-all duration-500 ease-in-out xl:hidden
+            isOpen ? "absolute left-0 right-0 bottom-0 top-0 slide-in-tr" : "hidden"
+          } absolute top-0 w-full h-full xl:hidden
           `}
         >
           {isOpen && (
@@ -36,52 +36,48 @@ function Navbar() {
                 className="text-first pr-5"
                 onClick={() => setIsOpen(false)}
               >
-                <RiCloseLargeLine size="2em" />
+                <RiCloseLargeLine size="1.5em" />
               </button>
             </li>
           )}
           <li>
             <a
-              href="#"
-              className="text-4xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
-            >
-              Home <IoIosHome />
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-3xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              href="#education"
+              className="text-xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              onClick={() => setIsOpen(false)}
             >
               About <BsPersonCircle />
             </a>
           </li>
           <li>
             <a
-              href="#"
-              className="text-3xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              href="#projects"
+              className="text-xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              onClick={() => setIsOpen(false)}
             >
               Projects <GoProjectSymlink />
             </a>
           </li>
           <li>
             <a
-              href="#"
-              className="text-3xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              href="#contact"
+              className="text-xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
+              onClick={() => setIsOpen(false)}
             >
               Contact <IoIosContact />
             </a>
           </li>
-          <li className="underline-animation text-center hover:text-third">
+          {/* <li className="underline-animation text-center hover:text-third">
             <button>
               <a
                 href="#"
-                className="text-3xl flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third "
+                className="text-xl flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third "
+                onClick={() => setIsOpen(false)}
               >
                 EN <FaLanguage />
               </a>
             </button>
-          </li>
+          </li> */}
         </ul>
 
         <ul
@@ -111,7 +107,7 @@ function Navbar() {
               Contact
             </a>
           </li>
-          <li className="underline-animation text-center hover:text-third">
+          {/* <li className="underline-animation text-center hover:text-third">
             <button>
               <a
                 href="#"
@@ -120,7 +116,7 @@ function Navbar() {
                 EN <FaLanguage />
               </a>
             </button>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

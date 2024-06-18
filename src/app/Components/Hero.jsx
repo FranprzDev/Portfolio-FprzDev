@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { RxLinkedinLogo, RxInstagramLogo, RxGithubLogo } from "react-icons/rx";
 
 function Hero() {
   return (
@@ -15,16 +16,39 @@ function Hero() {
           />
         </div>
         <div className="col-span-8 mx-5 active:text-first">
-          {/* <h2 className="text-second text-5xl my-2"> */}
           <h2 className="text-second text-5xl my-2 inline-block underline-animation hover:tracking-out-contract font-bold">
             Francisco Perez
-            {/* </h2> */}
           </h2>
-          <h2 className="text-second text-2xl ">Software Engineer</h2>
-          <p className="text-fourth pl-5">
+          <h2 className="text-second text-2xl">Software Engineer</h2>
+          <p className="text-fourth">
             First be a good person, then be a good professional, <br />
             <span className="font-bold">I'm both.</span>
           </p>
+
+          <div className="flex flex-row mt-3 gap-3">
+            <a
+              href="https://www.linkedin.com/in/francisco-perezdev/"
+              target="_blank"
+              className="bg-social-buttons text-third font-bold py-3 px-5 rounded-lg flex justify-center items-center hover:text-fourth"
+            >
+              <RxLinkedinLogo/>
+            </a>
+            <a
+              href="https://github.com/FranprzDev"
+              target="_blank"
+              className="bg-social-buttons text-third font-bold py-3 px-5 rounded-lg flex justify-center items-center hover:text-fourth"
+            >
+              <RxGithubLogo/>
+            </a>
+            <a
+              href="https://www.instagram.com/franprz23/?hl=es-la"
+              target="_blank"
+              className="bg-social-buttons text-third font-bold py-3 px-5 rounded-lg flex justify-center items-center hover:text-fourth"
+            >
+              <RxInstagramLogo/>
+            </a>
+            </div>
+
         </div>
       </div>
     </section>
