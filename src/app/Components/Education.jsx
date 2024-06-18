@@ -2,6 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { GoLinkExternal } from "react-icons/go";
 
+const apostrofo = () => {
+  return (
+    `'`);
+};
+
 function Education() {
   return (
     <section className="w-full flex justify-center" id="education">
@@ -12,7 +17,7 @@ function Education() {
               Education
             </h2>
             <p className="pt-3 text-third">
-              I{"&apos;"}m a <span className="font-bold">self-taught</span> person, I learn
+              I{apostrofo()}m a <span className="font-bold">self-taught</span> person, I learn
               from the internet, courses, but I also have studies in the
               university.
             </p>

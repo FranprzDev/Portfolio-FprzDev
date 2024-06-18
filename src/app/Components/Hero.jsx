@@ -2,6 +2,10 @@
 import Image from "next/image";
 import { RxLinkedinLogo, RxInstagramLogo, RxGithubLogo } from "react-icons/rx";
 
+const apostrofo = () => {
+  return `'`;
+};
+
 function Hero() {
   return (
     <section className="py-3 grid md:h-5/6 grid-cols-12 gap-4 items-center justify-center w-full z-0">
@@ -22,7 +26,7 @@ function Hero() {
           <h2 className="text-second text-2xl">Software Engineer</h2>
           <p className="text-fourth">
             First be a good person, then be a good professional, <br />
-            <span className="font-bold">I{"&apos;"}m both."</span>
+            <span className="font-bold">I{apostrofo()}m both."</span>
           </p>
 
           <div className="flex flex-row mt-3 gap-3">
@@ -31,24 +35,23 @@ function Hero() {
               target="_blank"
               className="bg-social-buttons text-third font-bold py-3 px-5 rounded-lg flex justify-center items-center hover:text-fourth"
             >
-              <RxLinkedinLogo/>
+              <RxLinkedinLogo />
             </a>
             <a
               href="https://github.com/FranprzDev"
               target="_blank"
               className="bg-social-buttons text-third font-bold py-3 px-5 rounded-lg flex justify-center items-center hover:text-fourth"
             >
-              <RxGithubLogo/>
+              <RxGithubLogo />
             </a>
             <a
               href="https://www.instagram.com/franprz23/?hl=es-la"
               target="_blank"
               className="bg-social-buttons text-third font-bold py-3 px-5 rounded-lg flex justify-center items-center hover:text-fourth"
             >
-              <RxInstagramLogo/>
+              <RxInstagramLogo />
             </a>
-            </div>
-
+          </div>
         </div>
       </div>
     </section>
