@@ -18,9 +18,11 @@ function Projects() {
             <p className="relative text-sm text-start font-italic text-third mt-1 text-pretty pl-2">
               Projects that I did during my university studies.
             </p>
-            <button className="absolute bg-project-button text-second hover:text-first right-5 bottom-5 z-2 font-italic rounded-50 p-1">
+            <a 
+            href="/Project?type=University"
+            className="absolute bg-project-button text-second hover:text-first right-5 bottom-5 z-2 font-italic rounded-50 p-1">
               Go to projects
-            </button>
+            </a>
           </div>
           <div className="relative col-span-12 xl:w-[400px] lg:col-span-4 bg-project-end h-[200px] md:h-[300px] inline-block">
             <div className="absolute inset-0 bg-project-middle backdrop-blur-lg"></div>
@@ -30,9 +32,11 @@ function Projects() {
             <p className="relative text-sm text-start font-italic text-third mt-1 text-pretty pl-2">
               Projects that I did with online courses.
             </p>
-            <button className="absolute bg-project-button text-second hover:text-first right-5 bottom-5 z-2 font-italic rounded-50 p-1">
+            <a 
+            href="/Project?type=Courses"
+            className="absolute bg-project-button text-second hover:text-first right-5 bottom-5 z-2 font-italic rounded-50 p-1">
               Go to projects
-            </button>
+            </a>
           </div>
           <div className="relative col-span-12 xl:w-[400px] lg:col-span-4 bg-project-end h-[200px] md:h-[300px] inline-block">
             <div className="absolute inset-0 bg-project-end backdrop-blur-lg"></div>
@@ -42,9 +46,11 @@ function Projects() {
             <p className="relative text-sm text-start font-italic text-third mt-1 text-pretty pl-2">
               Projects that I did with self-taught learning.
             </p>
-            <button className="absolute bg-project-button text-second hover:text-first right-5 bottom-5 z-2 font-italic rounded-50 p-1">
+            <a 
+            href="/Project?type=SelfTaught"
+            className="absolute bg-project-button text-second hover:text-first right-5 bottom-5 z-2 font-italic rounded-50 p-1">
               Go to projects
-            </button>
+            </a>
           </div>
         </article>
       </div>
