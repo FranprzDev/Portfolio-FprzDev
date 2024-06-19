@@ -31,7 +31,7 @@ function ProjectDetail() {
         </p>
       </article>
 
-      {ProjectDetail?.projectsEN.map((project, index) => (
+      {ProjectDetail?.projectsEN?.map((project, index) => (
         <div className="bg-cards-projects-details mx-3" key={index}>
           <h3 className="relative text-lg sm:text-xl text-start text-first font-bold mt-2 pl-1 text-balance md:text-3xl lg:text-4xl md:text-balance">
             {project?.name ? project?.name : "Project"}
@@ -47,6 +47,7 @@ function ProjectDetail() {
               height={300}
               className="rounded-lg object-fit slit-in-vertical active:flip-horizontal-bottom"
               alt={`Picture of ${project?.name ? project?.name : "Project"}`}
+              key={`image-${index}`}
             />
           </div>
 
