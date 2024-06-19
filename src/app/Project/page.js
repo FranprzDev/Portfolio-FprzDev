@@ -86,7 +86,7 @@ function ProjectDetail() {
 
 export function ProjectAllDetails() {
   return (
-    <Suspense>
+    <Suspense fallback={<div>test</div>} >
       <ProjectDetail />
     </Suspense>
   );
