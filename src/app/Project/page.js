@@ -31,8 +31,8 @@ function ProjectDetail() {
         </p>
       </article>
 
-      {ProjectDetail?.projectsEN.map((project) => (
-        <div className="bg-cards-projects-details mx-3">
+      {ProjectDetail?.projectsEN.map((project, index) => (
+        <div className="bg-cards-projects-details mx-3" key={index}>
           <h3 className="relative text-lg sm:text-xl text-start text-first font-bold mt-2 pl-1 text-balance md:text-3xl lg:text-4xl md:text-balance">
             {project?.name ? project?.name : "Project"}
           </h3>
