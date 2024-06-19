@@ -18,7 +18,7 @@ function LaboralExperience() {
             <ListItemExperience
               date={"November 2023 - May 2024"}
               job={"Advanced Backend Tutor"}
-              companyDirection={"/Rollingrojo.png"}
+              companyDirection={"/RollingRojo.png"}
               description={
                 "I was a tutor the backend area, teaching the students the complex concepts of the backend in Node.js."
               }
@@ -26,7 +26,7 @@ function LaboralExperience() {
             <ListItemExperience
               date={"May 2024 - Present"}
               job={"Basic Web Development Tutor"}
-              companyDirection={"/Rollingrojo.png"}
+              companyDirection={"/RollingRojo.png"}
               description={
                 "I was a tutor in the initial frontend area, teaching the students concepts in the frontend such as HTML, CSS"
               }
