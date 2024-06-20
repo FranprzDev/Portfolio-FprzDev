@@ -2,16 +2,19 @@
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { FaBackspace, FaGithub, FaPlay } from "react-icons/fa";
-import { Projects } from "../Constants/Projects";
+import { ProjectsArray } from "../Constants/Projects";
 import Footer from "../Components/Footer";
 import { Suspense } from "react";
+import Link from "next/link";
 
 function ProjectDetail() {
   const searchParams = useSearchParams();
 
   const search = searchParams.get("type");
 
-  const ProjectDetail = Projects.find((project) => project.nameEN === search);
+  const ProjectDetail = ProjectsArray.find(
+    (project) => project.nameEN === search
+  );
 
   return (
     <section className="w-full flex flex-col justify-center max-w-3xl mx-auto py-4 relative gap-3">
@@ -20,9 +23,9 @@ function ProjectDetail() {
           <h2 className="text-4xl text-first text-start underline underline-offset-[7px] font-bold inline-block ">
             {ProjectDetail?.nameEN ? ProjectDetail?.nameEN : "Projects"}
           </h2>
-          <a className="text-third hover:text-first text-3xl" href="/">
+          <Link className="text-third hover:text-first text-3xl" href="/">
             <FaBackspace />
-          </a>
+          </Link>
         </div>
         <p className="pt-4 text-third text-balance text-center md:text-start md:pl-2 md:text-pretty lg:text-balance">
           {ProjectDetail?.descriptionEN
@@ -52,6 +55,7 @@ function ProjectDetail() {
               className="rounded-lg object-fit slit-in-vertical active:flip-horizontal-bottom"
               alt={`Picture of ${project?.name ? project?.name : "Project"}`}
               key={`image-${index}`}
+              // onLoad={(e) => console.log(e.target.naturalWidth)}
             />
           </div>
 
@@ -86,7 +90,7 @@ function ProjectDetail() {
 
 export function ProjectAllDetails() {
   return (
-    <Suspense fallback={<div>test</div>} >
+    <Suspense fallback={<div>test</div>}>
       <ProjectDetail />
     </Suspense>
   );

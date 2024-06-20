@@ -66,7 +66,7 @@ const Courses = {
 }
 
 const SelfTaught = {
-    nameEN: "SelfTaught",
+    nameEN: "Self-Taught",
     nameES: "Autodidácta / Personal",
     descriptionEN: "All projects related to courses I have taken during my professional career.",
     descriptionES: "Todos los proyectos relacionados a cursos que fui realizando durante mi trayectoria profesional",
@@ -88,7 +88,7 @@ const SelfTaught = {
     ]
 }
 
-export const Projects = [
+export const ProjectsArray = [
     University,
     Courses,
     SelfTaught

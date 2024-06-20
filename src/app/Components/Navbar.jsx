@@ -85,7 +85,7 @@ function Navbar() {
         >
           <li>
             <a
-              href="#"
+              href="#education"
               className="text-sm text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
               About
@@ -93,7 +93,7 @@ function Navbar() {
           </li>
           <li>
             <a
-              href="#"
+              href="#projects"
               className="text-sm text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
               Projects
@@ -101,7 +101,7 @@ function Navbar() {
           </li>
           <li>
             <a
-              href="#"
+              href="#contact"
               className="text-sm text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
               Contact

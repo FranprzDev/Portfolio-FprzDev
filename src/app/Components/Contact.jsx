@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section className="w-full max-w-3xl flex justify-center">
+    <section className="w-full max-w-3xl flex justify-center" id="contact">
       <article className="grid grid-cols-1 md:grid-cols-2 w-full">
         <div className="pl-3 sm:rounded-lg md:flex md:flex-col md:justify-center lg:auto-cols-max">
           {/* Pate del Contacto */}

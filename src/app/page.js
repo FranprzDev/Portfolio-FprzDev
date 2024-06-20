@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Education from "./Components/Education";
@@ -5,20 +7,23 @@ import LaboralExperience from "./Components/LaboralExperience";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-// import Technologies from "./Components/Technologies";
-
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <Navbar />
-      <Hero />
-      <Education />
-      <LaboralExperience />
-      {/* <Technologies /> */}
-      <Projects />
-      <Contact />
-      <Footer />
-    </main>
+      <>
+        <main className="flex min-h-screen flex-col items-center">
+          <Navbar />
+          <Hero />
+          <Education />
+          <LaboralExperience />
+          <Projects />
+          <Contact />
+          <Footer />
+        </main>
+      </>
   );
 }
+// return (
+
+// );
