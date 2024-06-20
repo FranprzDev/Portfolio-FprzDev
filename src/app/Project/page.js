@@ -6,6 +6,7 @@ import { ProjectsArray } from "../Constants/Projects";
 import Footer from "../Components/Footer";
 import { Suspense } from "react";
 import Link from "next/link";
+import { Fade } from "react-awesome-reveal";
 
 function ProjectDetail() {
   const searchParams = useSearchParams();
@@ -35,53 +36,55 @@ function ProjectDetail() {
       </article>
 
       {ProjectDetail?.projectsEN?.map((project, index) => (
-        <div className="bg-cards-projects-details mx-3" key={index}>
-          <h3 className="relative text-lg sm:text-xl text-start text-first font-bold mt-2 pl-1 text-balance md:text-3xl lg:text-4xl md:text-balance">
-            {project?.name ? project?.name : "Project"}
-          </h3>
-          <p className="relative text-sm text-start font-italic text-third mt-1 text-balance pl-2 md:text-lg lg:text-xl">
-            {project?.description ? project?.description : "Description"}
-          </p>
+        <Fade cascade damping={0.2} triggerOnce key={index}>
+          <div className="bg-cards-projects-details mx-3" key={index}>
+            <h3 className="relative text-lg sm:text-xl text-start text-first font-bold mt-2 pl-1 text-balance md:text-3xl lg:text-4xl md:text-balance">
+              {project?.name ? project?.name : "Project"}
+            </h3>
+            <p className="relative text-sm text-start font-italic text-third mt-1 text-balance pl-2 md:text-lg lg:text-xl">
+              {project?.description ? project?.description : "Description"}
+            </p>
 
-          <div className="w-full flex justify-center py-2">
-            <Image
-              src={
-                project?.image
-                  ? project?.image
-                  : "/Projects/University/AyED.png"
-              }
-              width={300}
-              height={300}
-              className="rounded-lg object-fit slit-in-vertical active:flip-horizontal-bottom"
-              alt={`Picture of ${project?.name ? project?.name : "Project"}`}
-              key={`image-${index}`}
-              // onLoad={(e) => console.log(e.target.naturalWidth)}
-            />
-          </div>
+            <div className="w-full flex justify-center py-2">
+              <Image
+                src={
+                  project?.image
+                    ? project?.image
+                    : "/Projects/University/AyED.png"
+                }
+                width={300}
+                height={300}
+                className="rounded-lg object-fit slit-in-vertical active:flip-horizontal-bottom"
+                alt={`Picture of ${project?.name ? project?.name : "Project"}`}
+                key={`image-${index}`}
+                // onLoad={(e) => console.log(e.target.naturalWidth)}
+              />
+            </div>
 
-          <div className="w-full flex justify-end gap-3 pr-3 py-3">
-            {project?.demo ? (
-              <a
-                className="text-third hover:text-first text-3xl md:text-5xl lg:text-7xl"
-                href={project?.demo}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaPlay />
-              </a>
-            ) : null}
-            {project?.github ? (
-              <a
-                className="text-third hover:text-first text-3xl md:text-5xl lg:text-7xl"
-                href={project?.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaGithub />
-              </a>
-            ) : null}
+            <div className="w-full flex justify-end gap-3 pr-3 py-3">
+              {project?.demo ? (
+                <a
+                  className="text-third hover:text-first text-3xl md:text-5xl lg:text-7xl"
+                  href={project?.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaPlay />
+                </a>
+              ) : null}
+              {project?.github ? (
+                <a
+                  className="text-third hover:text-first text-3xl md:text-5xl lg:text-7xl"
+                  href={project?.github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                </a>
+              ) : null}
+            </div>
           </div>
-        </div>
+        </Fade>
       ))}
       <Footer />
     </section>

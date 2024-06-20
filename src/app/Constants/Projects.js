@@ -38,7 +38,7 @@ const University = {
 const Courses = {
     nameEN: "Courses",
     nameES: "Cursos",
-    descriptionEN: "All projects related to courses I have taken during my professional career.",
+    descriptionEN: "The projects related to courses I have taken during my professional career, principally in RollingCode School.",
     descriptionES: "Todos los proyectos relacionados a cursos que fui realizando durante mi trayectoria profesional",
     projectsEN: [
         {
@@ -56,11 +56,11 @@ const Courses = {
             demo: "https://duemovie.netlify.app"
         },
         {
-            name: "3rd Project - RollingCode School - EduSys",
+            name: "EduSys - 3rd Project RC School",
             description: "In this project, all the technology learned with the MERN stack was used, in addition to the use of ContextAPI. In this project, in addition to the role of developer, I took the role of Scrum Master.",
             image: "/Projects/Courses/EduSys.png",
-            github: "https://github.com/DanuVillaContini/DueMovie",
-            demo: "https://duemovie.netlify.app"
+            github: "https://github.com/FranprzDev/EduSys",
+            demo: "https://edu-sys-pied.vercel.app"
         }
     ]
 }
@@ -68,7 +68,7 @@ const Courses = {
 const SelfTaught = {
     nameEN: "Self-Taught",
     nameES: "Autodidácta / Personal",
-    descriptionEN: "All projects related to courses I have taken during my professional career.",
+    descriptionEN: "The projects that I do on my own as an internship or projects that I do in groups outside of courses.",
     descriptionES: "Todos los proyectos relacionados a cursos que fui realizando durante mi trayectoria profesional",
     projectsEN: [
         {
@@ -90,6 +90,6 @@ const SelfTaught = {
 
 export const ProjectsArray = [
     University,
-    Courses,
-    SelfTaught
+    SelfTaught,
+    Courses
 ]

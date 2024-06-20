@@ -31,6 +31,7 @@ import { FaFigma } from "react-icons/fa6";
 import Link from "next/link";
 
 import { ProjectsArray } from "../Constants/Projects";
+import { Fade } from "react-awesome-reveal";
 
 function Projects() {
   return (
@@ -44,28 +45,38 @@ function Projects() {
         </article>
 
         <section className="w-full flex flex-col justify-cente align-items-center gap-2 max-w-3xl sm:gap-5 mt-3">
-          {ProjectsArray.map((item, index) => (
-            <article className={`mx-3 ${
-              index % 2 == 0 ? "bg-project-first" : "bg-project-end"
-            }`} key={index}>
-              <h3 className="relative text-pretty text-lg sm:text-xl text-start text-first font-bold mt-2 pl-2 md:text-3xl lg:text-4xl md:text-balance">
-                {item?.nameEN ? item?.nameEN : "Project"}
-              </h3>
-              <p className="relative text-sm text-start text-pretty font-italic text-third mt-1 pl-2 md:text-lg lg:text-xl">
-                {item?.descriptionEN ? item?.descriptionEN : "Description"}
-              </p>
+          <Fade cascade triggerOnce damping={0.1}>
+            {ProjectsArray.map((item, index) => (
+              <article
+                className={`mx-3 ${
+                  index % 2 == 0 ? "bg-project-first" : "bg-project-end"
+                }`}
+                key={index}
+              >
+                <h3 className="relative text-pretty text-lg sm:text-xl text-start text-first font-bold mt-2 pl-2 md:text-3xl lg:text-4xl md:text-balance">
+                  {item?.nameEN ? item?.nameEN : "Project"}
+                </h3>
+                <p className="relative text-sm text-start text-pretty font-italic text-third mt-1 pl-2 md:text-lg lg:text-xl">
+                  {item?.descriptionEN ? item?.descriptionEN : "Description"}
+                </p>
 
-              <div className="w-full px-3 py-3 flex justify-around">
-                {
-                  item.nameEN === "University" ? (
+                <div className="w-full px-3 py-3 flex justify-around">
+                  {item.nameEN === "University" ? (
                     <>
                       <TbHexagonLetterCFilled className="text-2xl lg:text-3xl xl:text-4xl text-third hover:text-first" />
+
                       <DiProlog className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
+
                       <DiJava className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
+
                       <DiMysql className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
+
                       <DiNetbeans className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
+
                       <DiLinux className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
+
                       <DiHaskell className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
+
                       <FaFigma className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
                     </>
                   ) : item.nameEN === "Courses" ? (
@@ -79,7 +90,6 @@ function Projects() {
                       <DiNodejs className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
                       <DiMongodb className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
                       <DiGit className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
-
                       <DiGitCompare className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
                     </>
                   ) : (
@@ -92,17 +102,20 @@ function Projects() {
                       <DiJira className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
                       <DiGitBranch className="text-2xl text-third hover:text-first lg:text-3xl xl:text-4xl" />
                     </>
-                  )
-                }
-              </div>
+                  )}
+                </div>
 
-              <div className="w-full flex justify-end pr-4">
-                <Link 
-                className="bg-project-button text-second hover:text-first font-italic rounded-50 p-2 my-2"
-                href={`/Project?type=${item.nameEN}`}>Go to projects</Link>
-              </div>
-            </article>
-          ))}
+                <div className="w-full flex justify-end pr-4">
+                  <Link
+                    className="bg-project-button text-second hover:text-first font-italic rounded-50 p-2 my-2"
+                    href={`/Project?type=${item.nameEN}`}
+                  >
+                    Go to projects
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </Fade>
         </section>
       </div>
     </section>

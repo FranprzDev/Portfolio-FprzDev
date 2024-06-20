@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { GoLinkExternal } from "react-icons/go";
+import { Fade } from "react-awesome-reveal";
 
 function Education() {
   return (
@@ -12,9 +13,9 @@ function Education() {
               Education
             </h2>
             <p className="pt-3 text-third">
-            {`I${"'"}m `} a <span className="font-bold">self-taught</span> person, I learn
-              from the internet, courses, but I also have studies in the
-              university.
+              {`I${"'"}m `} a <span className="font-bold">self-taught</span>{" "}
+              person, I learn from the internet, courses, but I also have
+              studies in the university.
             </p>
           </div>
           <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-4">
