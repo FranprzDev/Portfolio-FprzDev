@@ -43,7 +43,7 @@ function Projects() {
           <p className="pt-3 text-third">My projects group by purpose.</p>
         </article>
 
-        <section className="w-full flex flex-col justify-cente align-items-center gap-2 max-w-3xl sm:gap-5">
+        <section className="w-full flex flex-col justify-cente align-items-center gap-2 max-w-3xl sm:gap-5 mt-3">
           {ProjectsArray.map((item, index) => (
             <article className={`mx-3 ${
               index % 2 == 0 ? "bg-project-first" : "bg-project-end"

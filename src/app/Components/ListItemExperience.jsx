@@ -7,7 +7,7 @@ function ListItemExperience({ date, job, companyDirection, description }) {
       <div className="flex-start flex items-center pt-2 md:block md:pt-0">
         <div className="-ms-[5px] me-3 h-[9px] w-[9px] rounded-full bg-second underline-5 lg:-mt-[5px] lg:me-0 lg:ms-0"></div>
       </div>
-      <div className="ms-4 mt-2 pb-5 md:ms-0 md:pl-3">
+      <div className="ms-4 mt-2 md:ms-0 md:pl-3">
         <h4 className="mb-1.5 text-xl font-semibold text-first">
           {job ? job : "Developer"}
         </h4>

@@ -13,7 +13,7 @@ function LaboralExperience() {
             Here you can see my laboral experience.
           </p>
         </article>
-        <div className="pt-2 mt-3 md:pt-0 md:mt-0 lg:h-[300px] flex items-center md:pl-3">
+        <div className="pt-2 mt-3 md:pt-0 md:mt-0 flex items-center md:pl-3 lg:mt-3">
           <ol className="border-s border-first lg:flex lg:justify-center lg:gap-6 lg:border-s-0 lg:border-t md:ml-2">
             <ListItemExperience
               date={"November 2023 - May 2024"}
