@@ -67,15 +67,6 @@ body {
 
 /* HERO PAGE */
 
-
-.bg-social-buttons {
-  background: rgb(48, 14, 150);
-  background: -moz-linear-gradient(270deg, rgba(48, 14, 150, 1) 5%, rgba(40, 12, 124, 1) 10%, rgba(31, 10, 93, 1) 15%, rgba(17, 5, 51, 1) 20%, rgba(48, 14, 150, 1) 45%, rgba(0, 0, 0, 1) 50%, rgba(48, 14, 150, 1) 55%, rgba(17, 5, 51, 1) 80%, rgba(31, 10, 93, 1) 85%, rgba(40, 12, 124, 1) 90%, rgba(48, 14, 150, 1) 95%);
-  background: -webkit-linear-gradient(270deg, rgba(48, 14, 150, 1) 5%, rgba(40, 12, 124, 1) 10%, rgba(31, 10, 93, 1) 15%, rgba(17, 5, 51, 1) 20%, rgba(48, 14, 150, 1) 45%, rgba(0, 0, 0, 1) 50%, rgba(48, 14, 150, 1) 55%, rgba(17, 5, 51, 1) 80%, rgba(31, 10, 93, 1) 85%, rgba(40, 12, 124, 1) 90%, rgba(48, 14, 150, 1) 95%);
-  background: linear-gradient(270deg, rgba(48, 14, 150, 1) 5%, rgba(40, 12, 124, 1) 10%, rgba(31, 10, 93, 1) 15%, rgba(17, 5, 51, 1) 20%, rgba(48, 14, 150, 1) 45%, rgba(0, 0, 0, 1) 50%, rgba(48, 14, 150, 1) 55%, rgba(17, 5, 51, 1) 80%, rgba(31, 10, 93, 1) 85%, rgba(40, 12, 124, 1) 90%, rgba(48, 14, 150, 1) 95%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#300e96", endColorstr="#300e96", GradientType=1);
-}
-
 .img-fp {
   clip-path: circle(50%);
 }
@@ -204,7 +195,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#300e96", endColorstr="#300e96", GradientType=1);
 }
 
-.bg-submit {
+.bg-buttons {
   background: rgb(48, 14, 150);
   background: -moz-linear-gradient(90deg, rgba(48, 14, 150, 1) 5%, rgba(40, 12, 124, 1) 10%, rgba(31, 10, 93, 1) 15%, rgba(0, 0, 0, 1) 50%, rgba(31, 10, 93, 1) 85%, rgba(40, 12, 124, 1) 90%, rgba(48, 14, 150, 1) 95%);
   background: -webkit-linear-gradient(90deg, rgba(48, 14, 150, 1) 5%, rgba(40, 12, 124, 1) 10%, rgba(31, 10, 93, 1) 15%, rgba(0, 0, 0, 1) 50%, rgba(31, 10, 93, 1) 85%, rgba(40, 12, 124, 1) 90%, rgba(48, 14, 150, 1) 95%);
@@ -309,4 +300,56 @@ body {
   font-size: 22px;
   font-weight: bold;
   color: blanchedalmond;
+}
+
+:root {
+  --expo-in: linear(
+    0 0%, 0.0085 31.26%, 0.0167 40.94%,
+    0.0289 48.86%, 0.0471 55.92%,
+    0.0717 61.99%, 0.1038 67.32%,
+    0.1443 72.07%, 0.1989 76.7%,
+    0.2659 80.89%, 0.3465 84.71%,
+    0.4419 88.22%, 0.554 91.48%,
+    0.6835 94.51%, 0.8316 97.34%, 1 100%
+  );
+  --expo-out: linear(
+    0 0%, 0.1684 2.66%, 0.3165 5.49%,
+    0.446 8.52%, 0.5581 11.78%,
+    0.6535 15.29%, 0.7341 19.11%,
+    0.8011 23.3%, 0.8557 27.93%,
+    0.8962 32.68%, 0.9283 38.01%,
+    0.9529 44.08%, 0.9711 51.14%,
+    0.9833 59.06%, 0.9915 68.74%, 1 100%
+  );
+}
+
+::view-transition-group(root) {
+  animation-timing-function: var(--expo-out);
+}
+
+::view-transition-new(root) {
+  mask: url("../../public/FranciscoPerez.png") center / 0 no-repeat;
+  animation: scale 1.0s;
+}
+
+::view-transition-old(root) {
+  animation: scale 0.5s;
+}
+
+@keyframes scale {
+  0% {
+    mask-size: 0;
+  }
+  10% {
+    mask-size: 50vmax;
+  }
+  50% {
+    mask-size: 100vmax;
+  }
+  90% {
+    mask-size: 50vmax;
+  }
+  100% {
+    mask-size: 100vmax;
+  }
 }

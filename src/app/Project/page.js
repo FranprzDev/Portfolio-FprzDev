@@ -5,7 +5,7 @@ import { FaBackspace, FaGithub, FaPlay } from "react-icons/fa";
 import { ProjectsArray } from "../Constants/Projects";
 import Footer from "../Components/Footer";
 import { Suspense } from "react";
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 import { Fade } from "react-awesome-reveal";
 
 function ProjectDetail() {

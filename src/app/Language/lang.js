@@ -1,27 +1,22 @@
-/* Navbar Text */
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
-const NavbarTextES = {
-    home: "Home",
-    about: "About",
-    projects: "Projects",
-    contact: "Contact"
-};
+i18n.use(initReactI18next).init({
+  fallbackLng: "en",
+  resources: {
+    en: {
+      translation: {
+        contact: "Contact",
+        aboutText: "About",
+      },
+    },
+    es: {
+      translation: {
+        contact: "Contactáme",
+        aboutText: "Acerca de Mí",
+      },
+    },
+  },
+});
 
-const NavbarTextEN = {
-    home: "Home",
-    about: "Acerca de mí",
-    projects: "Proyectos",
-    contact: "Contáctame"
-};
-
-const selectNavbarText = (lang) => {
-    switch(lang){
-        case "es":
-            return NavbarTextES;
-        case "en":
-            return NavbarTextEN;
-        default:
-            return NavbarTextEN;
-    }
-}
-
+export default i18n;

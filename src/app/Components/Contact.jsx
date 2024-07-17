@@ -156,7 +156,7 @@ function Contact() {
 
             <button
               type="submit"
-              className="md:w-32 md:mx-auto lg:w-64 xl:w-72 bg-submit hover:bg-black-500 text-third font-bold py-3 px-6 rounded-lg mt-3"
+              className="md:w-32 md:mx-auto lg:w-64 xl:w-72 bg-buttons hover:bg-black-500 text-third font-bold py-3 px-6 rounded-lg mt-3"
               value="Submit"
             >
               Submit

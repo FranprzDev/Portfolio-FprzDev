@@ -28,7 +28,7 @@ import {
   DiJira,
 } from "react-icons/di";
 import { FaFigma } from "react-icons/fa6";
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 
 import { ProjectsArray } from "../Constants/Projects";
 import { Fade } from "react-awesome-reveal";

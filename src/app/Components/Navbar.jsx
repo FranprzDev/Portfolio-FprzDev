@@ -5,9 +5,17 @@ import { RiCloseLargeLine } from "react-icons/ri";
 import { IoIosContact } from "react-icons/io";
 import { BsPersonCircle } from "react-icons/bs";
 import { GoProjectSymlink } from "react-icons/go";
+import { useTranslation } from "react-i18next";
+import i18n from "../Language/lang";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [language, setLanguage] = useState("en");
+  const { t } = useTranslation();
+
+  const handleChangeLang = (lang) => () => {
+    lang ? setLanguage(lang) : setLanguage("en");
+  }
 
   return (
     <nav className={`${isOpen ? "w-screen" : "max-w-3xl"} navbar-blur sticky py-3 flex items-center justify-around w-full navbar-background z-50`}>
@@ -27,7 +35,7 @@ function Navbar() {
         <ul
           className={`backgroundDesplegable flex-col items-start space-x-0 space-y-4 pt-5  ${
             isOpen ? "absolute left-0 right-0 bottom-0 top-0 slide-in-tr" : "hidden"
-          } absolute top-0 h-full min-h-screen lg:hidden
+          } absolute top-0 h-screen min-h-screen lg:hidden
           `}
         >
           {isOpen && (
@@ -64,7 +72,7 @@ function Navbar() {
               className="md:text-2xl text-xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
               onClick={() => setIsOpen(false)}
             >
-              Contact <IoIosContact />
+              {t("Contact")} <IoIosContact />
             </a>
           </li>
           {/* <li className="underline-animation text-center hover:text-third">
@@ -104,19 +112,39 @@ function Navbar() {
               href="#contact"
               className="text-md text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
-              Contact
+              {t("contact")}
             </a>
           </li>
-          {/* <li className="underline-animation text-center hover:text-third">
-            <button>
+          {
+            language === "en" ? (
+              <li className="underline-animation text-center hover:text-third">
+              <button
+                onClick={() => { i18n.changeLanguage("es"); setLanguage("es") }}
+              >
+                <a
+                  href="#"
+                  className="text-sm flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third "
+                >
+                  {language.toUpperCase()} <FaLanguage />
+                </a>
+              </button>
+            </li>
+          ) : language === "es" ? (
+            <li className="underline-animation text-center hover:text-third">
+            <button
+              onClick={() => { i18n.changeLanguage("en"); setLanguage("en") }}
+            >
               <a
                 href="#"
                 className="text-sm flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third "
               >
-                EN <FaLanguage />
+                {language.toUpperCase()} <FaLanguage />
               </a>
             </button>
-          </li> */}
+          </li>
+          ) : null
+          }
+
         </ul>
       </div>
     </nav>
