@@ -1,21 +1,22 @@
 import React from "react";
 import Image from "next/image";
 import { GoLinkExternal } from "react-icons/go";
-import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 function Education() {
+  const { t } = useTranslation();
   return (
     <section className="w-full flex justify-center" id="education">
       <section className="relative flex flex-col justify-center overflow-hidden">
         <div className="w-full max-w-3xl py-2">
           <div className="pl-3">
             <h2 className="text-4xl text-first underline underline-offset-[7px] font-bold inline-block">
-              Education
+              {t("education")}
             </h2>
             <p className="pt-3 text-third">
-              {`I${"'"}m `} a <span className="font-bold">self-taught</span>{" "}
-              person, I learn from the internet, courses, but I also have
-              studies in the university.
+              {
+                t("texteducation")
+              }
             </p>
           </div>
           <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-4">

@@ -1,4 +1,6 @@
+import { t } from "i18next";
 import { useForm } from "../hooks/useForm";
+import { useTranslation } from "react-i18next";
 
 const initialForm = {
   email: "",
@@ -13,22 +15,22 @@ const validationsForm = (form) => {
   let regexMessage = /^.{1,255}$/;
 
   if (!form.email.trim()) {
-    errors.email = "**Email is required**";
+    errors.email = t("requiredmail");
   } else if (!regexEmail.test(form.email.trim())) {
-    errors.email = "Invalid email";
+    errors.email = t("validationemail");
   }
   console.log("form", form)
 
   if (!form.subject.trim()) {
-    errors.subject = "**Subject is required**";
+    errors.subject = t("requiredsubject");
   } else if (!regexSubject.test(form.subject.trim())) {
-    errors.subject = "Invalid Subject"; 
+    errors.subject = t("invalidsubject"); 
   }
 
   if (!form.message.trim()) {
-    errors.message = "**The Message field is required**";
+    errors.message = t("requiredmessage");
   } else if (!regexMessage.test(form.message.trim())) {
-    errors.message = "Must be less than 255 characters";
+    errors.message = t("validationcharacters");
   }
 
   return errors;
@@ -44,16 +46,16 @@ function Contact() {
     handleSubmit,
   } = useForm(initialForm, validationsForm);
 
+  const { t } = useTranslation();
   return (
     <section className="w-full max-w-3xl flex justify-center" id="contact">
       <article className="grid grid-cols-1 md:grid-cols-2 w-full">
         <div className="pl-3 sm:rounded-lg md:flex md:flex-col md:justify-center lg:auto-cols-max">
-          {/* Pate del Contacto */}
           <h2 className="text-4xl text-first underline underline-offset-[7px] font-bold inline-block">
-            Contact
+            {t("contact")}
           </h2>
-          <p className="pt-3 text-third">Feel free to get in touch..</p>
-
+          <p className="pt-3 text-third">{t("contacttext")}</p>
+ 
           <div className="flex items-center mt-2 text-third">
             <svg
               fill="none"
@@ -125,7 +127,7 @@ function Contact() {
                 type="subject"
                 name="subject"
                 id="userSubject"
-                placeholder="Subject"
+                placeholder={t("subject")}
                 className="lg:max-w-[400px] w-100 mt-2 py-3 px-3 rounded-xl bg-input text-third focus:outline-none"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -143,7 +145,7 @@ function Contact() {
                 type="message"
                 name="message"
                 id="userMessage"
-                placeholder="Leave a message"
+                placeholder={t("submitamessage")}
                 className="lg:max-w-[400px] w-100 xl:max-w-[24rem] mt-2 py-3 px-3 rounded-xl bg-input text-third focus:outline-none"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -157,9 +159,9 @@ function Contact() {
             <button
               type="submit"
               className="md:w-32 md:mx-auto lg:w-64 xl:w-72 bg-buttons hover:bg-black-500 text-third font-bold py-3 px-6 rounded-lg mt-3"
-              value="Submit"
+              value={t("submit")}
             >
-              Submit
+              { t("submit") }
             </button>
           </form>
           {/* {response && <Modal/>} */}

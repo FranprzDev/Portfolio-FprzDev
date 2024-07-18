@@ -15,10 +15,14 @@ function Navbar() {
 
   const handleChangeLang = (lang) => () => {
     lang ? setLanguage(lang) : setLanguage("en");
-  }
+  };
 
   return (
-    <nav className={`${isOpen ? "w-screen" : "max-w-3xl"} navbar-blur sticky py-3 flex items-center justify-around w-full navbar-background z-50`}>
+    <nav
+      className={`${
+        isOpen ? "w-screen" : "max-w-3xl"
+      } navbar-blur sticky py-3 flex items-center justify-around w-full navbar-background z-50`}
+    >
       <div className="flex justify-center items-center space-x-10">
         <section className="flex gap-5 items-center hover:text-fourth">
           <h3 className="text-3xl hover:text-third">{"<"}</h3>
@@ -34,7 +38,9 @@ function Navbar() {
 
         <ul
           className={`backgroundDesplegable flex-col items-start space-x-0 space-y-4 pt-5  ${
-            isOpen ? "absolute left-0 right-0 bottom-0 top-0 slide-in-tr" : "hidden"
+            isOpen
+              ? "absolute left-0 right-0 bottom-0 top-0 slide-in-tr"
+              : "hidden"
           } absolute top-0 h-screen min-h-screen lg:hidden
           `}
         >
@@ -54,7 +60,7 @@ function Navbar() {
               className="md:text-2xl text-xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
               onClick={() => setIsOpen(false)}
             >
-              About <BsPersonCircle />
+              {t("about")} <BsPersonCircle />
             </a>
           </li>
           <li>
@@ -63,7 +69,7 @@ function Navbar() {
               className="md:text-2xl text-xl text-first hover:text-third underline-animation flex justify-center items-center gap-3"
               onClick={() => setIsOpen(false)}
             >
-              Projects <GoProjectSymlink />
+              {t("Projects")} <GoProjectSymlink />
             </a>
           </li>
           <li>
@@ -96,7 +102,7 @@ function Navbar() {
               href="#education"
               className="text-md text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
-              About
+              {t("about")}
             </a>
           </li>
           <li>
@@ -104,7 +110,7 @@ function Navbar() {
               href="#projects"
               className="text-md text-first hover:text-third underline-animation flex justify-center items-center gap-3"
             >
-              Projects
+              {t("projects")}
             </a>
           </li>
           <li>
@@ -115,36 +121,33 @@ function Navbar() {
               {t("contact")}
             </a>
           </li>
-          {
-            language === "en" ? (
-              <li className="underline-animation text-center hover:text-third">
+          {language === "en" ? (
+            <li className="underline-animation text-center hover:text-third">
               <button
-                onClick={() => { i18n.changeLanguage("es"); setLanguage("es") }}
+                onClick={() => {
+                  i18n.changeLanguage("es");
+                  setLanguage("es");
+                }}
               >
-                <a
-                  href="#"
-                  className="text-sm flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third "
-                >
+                <a className="text-sm flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third ">
                   {language.toUpperCase()} <FaLanguage />
                 </a>
               </button>
             </li>
           ) : language === "es" ? (
             <li className="underline-animation text-center hover:text-third">
-            <button
-              onClick={() => { i18n.changeLanguage("en"); setLanguage("en") }}
-            >
-              <a
-                href="#"
-                className="text-sm flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third "
+              <button
+                onClick={() => {
+                  i18n.changeLanguage("en");
+                  setLanguage("en");
+                }}
               >
-                {language.toUpperCase()} <FaLanguage />
-              </a>
-            </button>
-          </li>
-          ) : null
-          }
-
+                <a className="text-sm flex text-center justify-center items-center flex-row gap-3 text-first hover:text-third ">
+                  {language.toUpperCase()} <FaLanguage />
+                </a>
+              </button>
+            </li>
+          ) : null}
         </ul>
       </div>
     </nav>

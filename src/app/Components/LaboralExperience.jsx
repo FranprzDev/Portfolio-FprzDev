@@ -1,36 +1,39 @@
-import React from "react";
 import ListItemExperience from "./ListItemExperience";
+import { useTranslation } from "react-i18next";
+import { laboralExpeience } from "../Constants/LaboralExperience";
 
 function LaboralExperience() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full flex justify-center mb-3">
       <div className="w-full flex max-w-3xl justify-center items-start flex-col pl-3">
         <article className="pb-2 lg:pb-0">
           <h2 className="text-4xl text-first text-start underline underline-offset-[7px] font-bold inline-block">
-            Laboral Experience
+            { t("laboralexp") }
           </h2>
           <p className="pt-3 text-third">
-            Here you can see my laboral experience.
+            { t("textexperience") }
           </p>
         </article>
         <div className="pt-2 mt-3 md:pt-0 md:mt-0 flex items-center md:pl-3 lg:mt-3">
           <ol className="border-s border-first lg:flex lg:justify-center lg:gap-6 lg:border-s-0 lg:border-t md:ml-2">
-            <ListItemExperience
-              date={"November 2023 - May 2024"}
-              job={"Advanced Backend Tutor"}
-              companyDirection={"/RollingRojo.png"}
-              description={
-                "I was a tutor the backend area, teaching the students the complex concepts of the backend in Node.js."
-              }
-            />
-            <ListItemExperience
-              date={"May 2024 - Present"}
-              job={"Basic Web Development Tutor"}
-              companyDirection={"/RollingRojo.png"}
-              description={
-                "I was a tutor in the initial frontend area, teaching the students concepts in the frontend such as HTML, CSS"
-              }
-            />
+            {
+              laboralExpeience ? 
+              laboralExpeience.map(
+                (work, index) => {
+                  return (
+                    <ListItemExperience
+                      date={work.date}
+                      job={work.job}
+                      description={work.description}
+                      companyDirection={work.companyDirection}
+                      key={index}
+                    />
+                  )
+                }
+              ) : null
+            }
           </ol>
         </div>
       </div>

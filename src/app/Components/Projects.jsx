@@ -32,14 +32,17 @@ import { Link } from 'next-view-transitions'
 
 import { ProjectsArray } from "../Constants/Projects";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 function Projects() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full flex justify-center" id="projects">
       <div className="w-full flex max-w-3xl justify-center items-start flex-col ">
         <article className="pl-3 inline pb-2">
           <h2 className="text-4xl text-first text-start underline underline-offset-[7px] font-bold inline-block">
-            Projects
+            {t("projects")}
           </h2>
           <p className="pt-3 text-third">My projects group by purpose.</p>
         </article>

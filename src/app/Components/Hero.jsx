@@ -1,8 +1,11 @@
 "use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { RxLinkedinLogo, RxInstagramLogo, RxGithubLogo } from "react-icons/rx";
 
 function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-3 grid md:h-5/6 grid-cols-12 gap-4 items-center justify-center w-full z-0">
       <div className="col-span-12 flex flex-col-reverse sm:flex-row justify-center items-center relative">
@@ -19,11 +22,16 @@ function Hero() {
           <h2 className="text-second text-5xl my-2 inline-block underline-animation hover:tracking-out-contract font-bold">
             Francisco Perez
           </h2>
-          <h2 className="text-second text-2xl">System Engineer</h2>
-            <p className="text-fourth">
-              First be a good person, then be a good professional, <br />
-              <span className="font-bold">{`I${"'"}m both.`}</span>
-            </p>
+          <h2 className="text-second text-2xl">{t("systemEngineer")}</h2>
+          <p className="text-fourth mt-1">
+            {t("first")} 
+            <br />
+            {t("second")} 
+            <br />
+            <span className="font-bold">
+              {t("third")}
+            </span>
+          </p>
 
           <div className="flex flex-row mt-3 gap-3">
             <a
