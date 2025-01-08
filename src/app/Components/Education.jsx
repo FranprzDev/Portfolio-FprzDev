@@ -13,7 +13,7 @@ function Education() {
             <h2 className="text-4xl text-first underline underline-offset-[7px] font-bold inline-block">
               {t("education")}
             </h2>
-            <p className="pt-3 text-third sa">
+            <p className="pt-3 text-third sad">
               {
                 t("texteducation")
               }
